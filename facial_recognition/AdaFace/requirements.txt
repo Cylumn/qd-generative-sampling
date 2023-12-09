@@ -1,0 +1,4 @@
+bcolz-zipline
+prettytable
+menpo
+mxnet
