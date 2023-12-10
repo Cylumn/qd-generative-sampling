@@ -58,8 +58,18 @@ $ python AdaFace/convert.py --rec_path data/faces_real --make_validation_memfile
 
 
 ### Training and Evaluation
-To train and evaluate the facial recognition classifier, enter the shapes directory, and run the training script:
+To train and evaluate the facial recognition classifier, enter the facial recognition directory, and run the training script:
 ```
 $ cd facial_recognition
 $ sh train_eval.sh
+```
+
+## Citation
+```
+@inproceedings{chang2024quality,
+  title={Quality-Diversity Generative Sampling for Learning with Synthetic Data},
+  author={Chang, Allen and Fontaine, Matthew and Booth, Serena and Matari{\'c}, Maja J. and Nikolaidis, Stefanos},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  year={2024}
+}
 ```
