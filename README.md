@@ -68,7 +68,7 @@ $ sh train_eval.sh [data-directory]
 ```
 @inproceedings{chang2024quality,
   title={Quality-Diversity Generative Sampling for Learning with Synthetic Data},
-  author={Chang, Allen and Fontaine, Matthew and Booth, Serena and Matari{\'c}, Maja J. and Nikolaidis, Stefanos},
+  author={Chang, Allen and Fontaine, Matthew C and Booth, Serena and Matari{\'c}, Maja J and Nikolaidis, Stefanos},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year={2024}
 }
