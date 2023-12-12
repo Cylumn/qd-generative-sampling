@@ -35,7 +35,7 @@ def main(args):
     my_loggers = [csv_logger]
     if args.use_wandb:
         wandb_logger = WandbLogger(save_dir=hparams.output_dir,
-                                   name=os.path.basename(args.output_dir), project='adaface_face_recognition')
+                                   name=os.path.basename(args.output_dir), project='qdgs_face_recognition')
         my_loggers.append(wandb_logger)
 
     resume_from_checkpoint = hparams.resume_from_checkpoint if hparams.resume_from_checkpoint else None

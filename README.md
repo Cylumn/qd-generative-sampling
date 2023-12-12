@@ -24,7 +24,7 @@ $ pip install -r AdaFace/requirements.txt
 The pretrained generator weights are provided in the repository and will be automatically loaded.
 
 **Facial Recognition Domain:**
-To run the facial recognition experiments, you must first download `stylegan2-ffhq-256x256.pkl` from the [NVIDIA website](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan2/files). Place the `.pt` file in the folder `facial_recognition/pretrained`.
+To run the facial recognition experiments, you must first download `stylegan2-ffhq-256x256.pkl` from the [NVIDIA website](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/research/models/stylegan2/files). Place the `.pkl` file in the folder `facial_recognition/pretrained`.
 
 The QDGS code builds on the LSI (StyleGAN2) experiments from the [CMA-MAE repository](https://github.com/icaros-usc/cma_mae), which includes dnnlib and torch_util from the [StyleGAN2-Ada repository](https://github.com/NVlabs/stylegan2-ada) for replicability, the [StyleGAN3+CLIP notebook](https://colab.research.google.com/github/ouhenio/StyleGAN3-CLIP-notebook/blob/main/StyleGAN3%2BCLIP.ipynb) and [repository](https://github.com/ouhenio/StyleGAN3-CLIP-notebooks) from the generative art community.
 We include a modified version of the facial recognition training code from the [Adaface repository](https://github.com/mk-minchul/AdaFace).
@@ -38,10 +38,10 @@ $ python3 generate_data.py --task [task]
 
 ## Shape Experiments
 ### Training and Evaluation
-To train and evaluate the shapes classifier, enter the shapes directory, and run the training script:
+To train and evaluate the shapes classifier, enter the shapes directory, and run the training script. You will need to pass the name of the data directory as an argument---you can find this under `shapes/data` after you have ran the data generation script.
 ```
 $ cd shapes
-$ sh train_eval.sh
+$ sh train_eval.sh [data-directory]
 ```
 
 ## Facial Recognition Experiments
@@ -58,10 +58,10 @@ $ python AdaFace/convert.py --rec_path data/faces_real --make_validation_memfile
 
 
 ### Training and Evaluation
-To train and evaluate the facial recognition classifier, enter the facial recognition directory, and run the training script:
+To train and evaluate the facial recognition classifier, enter the facial recognition directory, and run the training script. You will need to pass the name of the data directory as an argument---you can find this under `facial_recognition/data` after you have ran the data generation script.
 ```
 $ cd facial_recognition
-$ sh train_eval.sh
+$ sh train_eval.sh [data-directory]
 ```
 
 ## Citation

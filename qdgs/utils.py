@@ -287,7 +287,7 @@ def write_data(outdir,
             # Cluster similar solutions
             subject_idx_list = {}
             n_clusters = math.ceil(len(sols_in_cell) / imgs_per_subject)
-            clusters = KMeans(n_clusters, n_init=10, max_iter=2000).fit(sols_in_cell).labels_
+            clusters = KMeans(n_clusters, n_init=10, max_iter=2000).fit(sols_in_cell.cpu()).labels_
             for i in range(n_clusters):
                 subject_idx_list[i] = np.where(clusters == i)[0]
 
